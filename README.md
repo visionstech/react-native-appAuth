@@ -45,7 +45,7 @@ flow and returns the access token, refresh token and access token expiry date wh
 throws an error when not successful.
 
 ```js
-import AppAuth from 'react-native-app-auth';
+import AppAuth from 'react-native-appAuth';
 
 const appAuth = new AppAuth(config);
 const result = await appAuth.authorize(scopes);
@@ -74,8 +74,8 @@ const result = await appAuth.revokeToken(tokenToRevoke, sendClientId);
 ## Getting started
 
 ```sh
-npm install react-native-app-auth --save
-react-native link react-native-app-auth
+npm install react-native-appAuth --save
+react-native link react-native-appAuth
 ```
 
 **Then follow the [Setup](#setup) steps to configure the native iOS and Android projects.**
@@ -89,7 +89,7 @@ steps instead.
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's
    name]`
-2. Go to `node_modules` ➜ `react-native-app-auth` and add `RNAppAuth.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-appAuth` and add `RNAppAuth.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNAppAuth.a` to your project's
    `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
@@ -103,12 +103,12 @@ steps instead.
 
 2. Append the following lines to `android/settings.gradle`:
    ```
-   include ':react-native-app-auth'
-   project(':react-native-app-auth').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-app-auth/android')
+   include ':react-native-appAuth'
+   project(':react-native-app-auth').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-appAuth/android')
    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
    ```
-     compile project(':react-native-app-auth')
+     compile project(':react-native-appAuth')
    ```
 
 ## Setup
@@ -273,7 +273,7 @@ The scheme is the beginning of your OAuth Redirect URL, up to the scheme separat
 ## Usage
 
 ```javascript
-import AppAuth from 'react-native-app-auth';
+import AppAuth from 'react-native-appAuth';
 
 // initialise the client with your configuration
 const appAuth = new AppAuth({
